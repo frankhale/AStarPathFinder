@@ -12,6 +12,8 @@ A* path finding implementation
 // never meshes with ours.
 ```
 
+![Sample](screenshots/sample.png)
+
 Frank Hale &lt;frankhaledevelops@gmail.com&gt;
 
 27 March 2021
