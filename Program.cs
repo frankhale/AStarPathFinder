@@ -139,8 +139,7 @@ namespace AStarPathFinder
                     child.h = (int)Math.Pow((child.position.X - endNode.position.X), 2) + (int)Math.Pow(child.position.Y - endNode.position.Y, 2);
                     child.f = child.g + child.h;
 
-                    foreach (var openNode in openList)
-                        if (child.eq(openNode) && child.g > openNode.g) continue;
+                    if (openList.FirstOrDefault(x => x.eq(child) && x.g < child.g) != null) continue;
 
                     openList.Add(child);
                 }
@@ -171,6 +170,8 @@ namespace AStarPathFinder
 
             var astar = new AStarPathfinder(map, 10, 10);
             var path = astar.FindPath(new Point(1, 0), new Point(6, 2));
+
+            Console.WriteLine($"steps: {path.Count()}");
 
             //foreach (var p in path)
             //{
