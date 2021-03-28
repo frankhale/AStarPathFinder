@@ -12,6 +12,9 @@ A* path finding implementation
 // never meshes with ours.
 ```
 
+Diagonal nodes are not part of the path result because in my own game I do not
+support diagonal movement. This is easy enough to uncomment if you desire.
+
 ![Sample](screenshots/sample.png)
 
 Frank Hale &lt;frankhaledevelops@gmail.com&gt;
