@@ -24,7 +24,7 @@ namespace AStarPathFinder
         }
     }
 
-    public class AStarPathfinder
+    public class AStarPathFinder
     {
         private int width;
         private int height;
@@ -54,7 +54,7 @@ namespace AStarPathFinder
             }
         }
 
-        public AStarPathfinder(int[,] m, int w, int h)
+        public AStarPathFinder(int[,] m, int w, int h)
         {
             map = m;
             width = w;
@@ -168,7 +168,7 @@ namespace AStarPathFinder
                 { 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 }
             };
 
-            var astar = new AStarPathfinder(map, 10, 10);
+            var astar = new AStarPathFinder(map, 10, 10);
             var path = astar.FindPath(new Point(1, 0), new Point(6, 2));
 
             Console.WriteLine($"steps: {path.Count()}");
